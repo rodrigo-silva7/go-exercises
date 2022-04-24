@@ -1,0 +1,8 @@
+#!/bin/sh
+
+go run monitor_logs.go
+echo ""
+echo "-- exibindo logs --"
+cat log.txt
+#rm log.txt
+echo ""
