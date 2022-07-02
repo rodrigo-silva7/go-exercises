@@ -22,3 +22,7 @@ https://random-status-code.herokuapp.com- online: true - time: 23/04/2022 12:28:
 https://www.alura.com.br- online: true - time: 23/04/2022 12:28:23
 https://www.caelum.com.br- online: true - time: 23/04/2022 12:28:26
 https://www.casadocodigo.com.br- online: true - time: 23/04/2022 12:28:29
+https://random-status-code.herokuapp.com- online: true - time: 27/06/2022 22:14:09
+https://www.alura.com.br- online: true - time: 27/06/2022 22:14:12
+https://www.caelum.com.br- online: true - time: 27/06/2022 22:14:15
+https://www.casadocodigo.com.br- online: true - time: 27/06/2022 22:14:17
