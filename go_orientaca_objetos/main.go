@@ -2,52 +2,31 @@ package main
 
 import (
    "fmt"
-   m "model"
+   "go_oo/contas"
+   "go_oo/clientes"
 )
+
+func pagarBoleto(conta contas.Conta, value float64) {
+   conta.Sacar(value);
+}
 
 func main() {
 
-////   contaRodrigo := m.ContaCorrente{titular: "Rodrigo", numeroAgencia: 589, numeroConta: 123456, saldo: 125.50}; 
-   //contaAline := m.ContaCorrente{"Aline", 590, 123491, 356.15};
-   //
-   ////fmt.Println(contaRodrigo);
-   ////fmt.Println(contaAline);
-//
-   //var contaDaCris *m.ContaCorrente
-   //contaDaCris = new(m.ContaCorrente)
-   //contaDaCris.Titular = "Cris"
-   //contaDaCris.Saldo = 500
-   //contaDaCris.NumeroAgencia = 591
-   //contaDaCris.NumeroConta = 123492
-//
-   //contaAline.Depositar(200);
-   //contaRodrigo.Depositar(300);
-//
-   //fmt.Println(*contaDaCris);
-   //fmt.Println(contaDaCris.Sacar(300));
-   //fmt.Println(*contaDaCris);
-//
-   //statusString, valor := contaDaCris.Depositar(500);
-   //
-   //fmt.Println("status:", statusString);
-   //fmt.Println("Novo saldo é:", valor);
-   //
-   //fmt.Println(*contaDaCris);
-   //fmt.Println(contaAline);
-//
-   //contaAline.Transferir(200, contaDaCris);
-   //
-   //fmt.Println(*contaDaCris);
-   //fmt.Println(contaAline);
-//
-   //contaDaCris.Transferir(200, &contaAline);
-   //
-   //fmt.Println(*contaDaCris);
-   //fmt.Println(contaAline);
+   conta1 := contas.ContaCorrente{
+      Titular: clientes.Titular{
+         Nome: "Bruno",
+         CPF: "123.465.879-87",
+         Profissao: "Desenvolvedor",
+      },
+      NumeroAgencia: 123,
+      NumeroConta: 123456,
+   }
 
-   conta1 := m.ContaCorrente{Titular: "André", Saldo: 300};
-   conta2 := m.ContaCorrente{Titular: "Júlia", Saldo: 150};
+   conta1.Depositar(500);
+   fmt.Println(conta1);
+   fmt.Println("O Saldo é", conta1.Saldo());
 
-   status := conta1.
+   pagarBoleto(&conta1, 60);
 
+   fmt.Println("O Saldo é", conta1.Saldo());
 }
